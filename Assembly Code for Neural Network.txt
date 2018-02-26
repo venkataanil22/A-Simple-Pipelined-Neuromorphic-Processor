@@ -1,0 +1,121 @@
+LOAD R01,data_memory[0]
+LOAD R02,data_memory[1]
+LOAD R03,data_memory[2]
+LOAD R04,data_memory[3]
+LOAD R05,data_memory[4]
+LOAD R06,data_memory[5]
+LOAD R07,data_memory[6]
+LOAD R08,data_memory[7]
+MUL R09,R01,R05
+MUL R10,R02,R06
+MUL R11,R03,R07
+MUL R12,R04,R08
+ADD R13,R09,R10
+ADD R14,R11,R12
+NOP
+ADD R13,R13,R14	# zh1 in R13
+NOP
+SLT R15,R13,R0 # yh1 in R15
+LOAD R05,data_memory[8]
+LOAD R06,data_memory[9]
+LOAD R07,data_memory[10]
+LOAD R08,data_memory[11]
+MUL R09,R01,R05
+MUL R10,R02,R06
+MUL R11,R03,R07
+MUL R12,R04,R08
+ADD R13,R09,R10
+ADD R14,R11,R12
+NOP
+ADD R13,R13,R14	# zh2 in R13
+NOP
+SLT R16,R13,R0 # yh2 in R16
+LOAD R05,data_memory[12]
+LOAD R06,data_memory[13]
+LOAD R07,data_memory[14]
+LOAD R08,data_memory[15]
+MUL R09,R01,R05
+MUL R10,R02,R06
+MUL R11,R03,R07
+MUL R12,R04,R08
+ADD R13,R09,R10
+ADD R14,R11,R12
+NOP
+ADD R13,R13,R14	# zh3 in R13
+NOP
+SLT R17,R13,R0 # yh3 in R17
+LOAD R05,data_memory[16]
+LOAD R06,data_memory[17]
+LOAD R07,data_memory[18]
+LOAD R08,data_memory[19]
+MUL R09,R01,R05
+MUL R10,R02,R06
+MUL R11,R03,R07
+MUL R12,R04,R08
+ADD R13,R09,R10
+ADD R14,R11,R12
+NOP
+ADD R13,R13,R14	# zh4 in R13
+NOP
+SLT R18,R13,R0 # yh4 in R18
+LOAD R05,data_memory[20]
+LOAD R06,data_memory[21]
+LOAD R07,data_memory[22]
+LOAD R08,data_memory[23]
+MUL R09,R15,R05
+MUL R10,R16,R06
+MUL R11,R17,R07
+MUL R12,R18,R08
+ADD R13,R09,R10
+ADD R14,R11,R12
+NOP
+ADD R13,R13,R14	# z1 in R13
+NOP
+SLT R19,R13,R0 # y1 in R19
+STORE data_memory[36], R19 # Output value in data memory
+LOAD R05,data_memory[24]
+LOAD R06,data_memory[25]
+LOAD R07,data_memory[26]
+LOAD R08,data_memory[27]
+MUL R09,R01,R05
+MUL R10,R02,R06
+MUL R11,R03,R07
+MUL R12,R04,R08
+ADD R13,R09,R10
+ADD R14,R11,R12
+NOP
+ADD R13,R13,R14	# z1 in R13
+NOP
+SLT R20,R13,R0 # y1 in R20
+STORE data_memory[37], R20 # Output value in data memory
+LOAD R05,data_memory[28]
+LOAD R06,data_memory[29]
+LOAD R07,data_memory[30]
+LOAD R08,data_memory[31]
+MUL R09,R01,R05
+MUL R10,R02,R06
+MUL R11,R03,R07
+MUL R12,R04,R08
+ADD R13,R09,R10
+ADD R14,R11,R12
+NOP
+ADD R13,R13,R14	# z1 in R13
+NOP
+SLT R21,R13,R0 # y1 in R21
+STORE data_memory[38], R21 # Output value in data memory
+LOAD R05,data_memory[32]
+LOAD R06,data_memory[33]
+LOAD R07,data_memory[34]
+LOAD R08,data_memory[35]
+MUL R09,R01,R05
+MUL R10,R02,R06
+MUL R11,R03,R07
+MUL R12,R04,R08
+ADD R13,R09,R10
+ADD R14,R11,R12
+NOP
+ADD R13,R13,R14	# z1 in R13
+NOP
+SLT R22,R13,R0 # y1 in R22
+STORE data_memory[39], R22 # Output value in data memory
+HALT
